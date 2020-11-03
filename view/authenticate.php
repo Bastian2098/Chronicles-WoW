@@ -4,8 +4,9 @@
 
     $user = new User("", $email, $password);
     if($user -> authenticate()){
-        echo "autenticado";
+        $_SESSION["id"] = $user -> getIdUser();
+        header("Location: index.php?id=view/session.php");
     }else{
-        echo "No se autentico";
+        header("Location: index.php?error=1");
     }
 ?>

@@ -40,6 +40,14 @@ class User{
         }
         $this -> connection -> close();
     }
+
+    function query(){
+        $this -> connection -> open();
+        $this -> connection -> execute($this -> userDAO -> query());
+        $this -> connection -> close();
+        $result = $this -> connection -> extract();
+        $this -> email = $result[0];
+    }
 }
 
 ?>

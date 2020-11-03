@@ -15,6 +15,10 @@ class UserDAO{
         echo $this->email.$this->password."ptm";
         return "select ID_USER from User where email = '".$this->email."' and password = '".$this->password."'";
     }
+
+    function query(){
+        return "select email from User where ID_USER = '".$this->idUser."'";
+    }
 }
 
 
