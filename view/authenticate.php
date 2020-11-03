@@ -1,8 +1,8 @@
 <?php
     $email = $_POST["email"];
-    $pass = $_POST["pass"];
+    $password = $_POST["pass"];
 
-    $user = new User("", $email, $pass);
+    $user = new User("", $email, $password);
     if($user -> authenticate()){
         echo "autenticado";
     }else{

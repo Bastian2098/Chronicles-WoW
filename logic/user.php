@@ -9,10 +9,10 @@ class User{
     private $connection;
     private $userDAO;
 
-    function User($_idUser, $_email, $_password){
+    function User($_idUser="", $_email="", $_password=""){
         $this -> idUser = $_idUser;
         $this -> email = $_email;
-        $this -> idUser = $_password;
+        $this -> password = $_password;
         $this -> connection = new Connection();
         $this -> userDAO = new UserDAO($_idUser, $_email, $_password);
     }

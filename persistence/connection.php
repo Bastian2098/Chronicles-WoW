@@ -15,7 +15,7 @@ class Connection{
     }
 
     function execute($sentence){
-        $this -> result = $this -> msqli -> query($sentence);
+        $this -> result = $this -> mysqli -> query($sentence);
     }
 
     function extract(){
